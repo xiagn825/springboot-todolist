@@ -52,9 +52,6 @@ a_little_config_pro.txt
 dev_plan.txt
 .gradle/
 out/
-src/test/java/java/
-/build.gradle
-
 classes
 
 

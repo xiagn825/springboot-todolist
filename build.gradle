@@ -1,0 +1,30 @@
+plugins {
+    id 'org.springframework.boot' version '1.4.5.RELEASE'
+    id 'java'
+    id 'idea'
+    id 'war'
+}
+
+jar {
+    baseName = 'springboot-todolist'
+    version = '0.0.1-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.boot:spring-boot-starter-actuator")
+    compile("org.springframework.boot:spring-boot-devtools")
+//    引入freemarker
+    compile("org.springframework.boot:spring-boot-starter-freemarker")
+    compile group: 'org.apache.tomcat.embed', name: 'tomcat-embed-jasper', version: '9.0.0.M21'
+//    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    compile group: 'org.springframework', name: 'spring-oxm', version: '4.3.9.RELEASE'
+    compile group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.10'
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}
